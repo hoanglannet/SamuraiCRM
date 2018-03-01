@@ -10,6 +10,8 @@ module Samurai
           end
         end
       end
+
+      paths["app/views"] << "app/views/samurai"
     end
   end
 end
