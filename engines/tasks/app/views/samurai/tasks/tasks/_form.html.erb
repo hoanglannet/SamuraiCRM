@@ -20,6 +20,11 @@
   <%= form.label :user_id %>
   <%= form.select :user_id, Samurai::User.all.collect { |p| [ p.email, p.id ] }, { selected: current_user.id } %>
 
+  <% if Samurai::Core.available?(:contacts) %>
+    <%= form.label :contact_id %>
+    <%= form.select :contact_id, Samurai::Contacts::Contact.all.collect { |p| [ p.email, p.id ] }, { allow_blank: true } %>
+  <% end %>
+
   <div class="actions">
     <%= form.submit %>
   </div>
