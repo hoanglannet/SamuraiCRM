@@ -9,11 +9,22 @@
 <body>
   <nav>
     <ul>
-      <li><%= link_to 'Home', samurai.root_path %></li>
+      <li class="<%= active(samurai.root_path) %>"><%= link_to 'Home', samurai.root_path %></li>
+      <% if current_user %>
+        <li class="<%= active(samurai.edit_user_registration_path) %>"><%= link_to "Account", samurai.edit_user_registration_path %></li>
+        <li><%= link_to "Logout", samurai.destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li class="<%= active(samurai.new_user_session_path) %>"><%= link_to "Login", samurai.new_user_session_path %></li>
+        <li class="<%= active(samurai.new_user_registration_path) %>"><%= link_to "SignUp", samurai.new_user_registration_path %></li>
+      <% end %>
     </ul>
   </nav>
 
-<%= yield %>
+  <% flash.each do |key, value| %>
+     <div class="<%= flash_class(key.to_sym) %>"><%= value %></div>
+  <% end %>
+
+  <%= yield %>
 
 </body>
 </html>
