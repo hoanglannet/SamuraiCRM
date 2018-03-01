@@ -1,3 +1,9 @@
+PATH
+  remote: engines/core
+  specs:
+    samurai_core (0.0.1)
+      rails (~> 5.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -156,6 +162,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.7)
   rails (~> 5.1.5)
+  samurai_core!
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
