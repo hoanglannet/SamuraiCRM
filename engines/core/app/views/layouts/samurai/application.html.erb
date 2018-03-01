@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Samurai</title>
+  <%= stylesheet_link_tag    "samurai/application", media: "all" %>
+  <%= javascript_include_tag "samurai/application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><%= link_to 'Home', samurai.root_path %></li>
+    </ul>
+  </nav>
+
+<%= yield %>
+
+</body>
+</html>
