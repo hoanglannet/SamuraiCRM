@@ -1,6 +1,6 @@
 module Samurai
   module Admin
-    class UsersController < ApplicationController
+    class UsersController < AdminController
       def index
         @users = Samurai::User.ordered
       end
