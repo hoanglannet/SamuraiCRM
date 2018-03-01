@@ -9,7 +9,7 @@
 <body>
   <nav>
     <ul>
-      <li class="<%= active(samurai.root_path) %>"><%= link_to 'Home', samurai.root_path %></li>
+      <li class="<%= active(samurai.root_path) %>" data-samurai-hook='main_nav'><%= link_to 'Home', samurai.root_path %></li>
       <% if current_user %>
         <li class="<%= active(samurai.edit_user_registration_path) %>"><%= link_to "Account", samurai.edit_user_registration_path %></li>
         <% if current_user.admin? %>

@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 5.1.0"
   s.add_dependency "samurai_core"
-  s.add_dependency "deface"
+  s.add_dependency "deface", "~> 1.3.0"
 
   s.add_development_dependency "pg"
 end
