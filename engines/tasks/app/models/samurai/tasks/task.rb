@@ -8,5 +8,7 @@ module Samurai::Tasks
       alias_attribute :contact_id, :samurai_contacts_contact_id
     end
 
+    scope :ordered, -> { order('created_at desc') }
+
   end
 end
